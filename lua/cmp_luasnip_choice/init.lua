@@ -17,7 +17,7 @@ function M.setup(config)
 
     if config.auto_open then
         vim.api.nvim_create_autocmd('User', {
-            pattern = 'LuasnipChoiceNodeEnter',
+            pattern = 'LuasnipEnterChoiceNode',
             callback = function()
                 vim.schedule(function()
                     cmp.complete({
